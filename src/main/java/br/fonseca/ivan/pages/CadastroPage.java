@@ -2,8 +2,6 @@ package br.fonseca.ivan.pages;
 
 import static br.fonseca.ivan.core.DriverManager.getDriver;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 
 import br.fonseca.ivan.core.BasePage;
@@ -21,10 +19,6 @@ public class CadastroPage extends BasePage {
 	
 	public void iniciarCadastro() {
 		clicarElementoById("SubmitCreate");
-	}
-	
-	public void esperarPagina() {
-		getDriver().manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
 	}
 	
 	public void setGeneroMasculino() {

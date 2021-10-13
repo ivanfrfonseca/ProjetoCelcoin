@@ -13,11 +13,11 @@ public class CadastroTest {
 		
 		//Acessando a tela de cadastro
 		cadastroPage.acessarTelaCadastro();
-		cadastroPage.setEmailcadastro("ivanteste@gmail.com");
+		cadastroPage.setEmailcadastro("testeivan@gmail.com");
 		cadastroPage.iniciarCadastro();
 		
-		//Aguardando a página carregar
-		cadastroPage.esperarPagina();
+		//Aguardando a página carregar (Parâmetro tempo em segundos)
+		cadastroPage.esperarPagina(6);
 				
 		//Preenchendo os dados de cadastro
 		cadastroPage.setGeneroMasculino();
@@ -44,7 +44,7 @@ public class CadastroTest {
 		cadastroPage.setEnderecoReferencia("Endereço de Teste");
 		
 		//Enviando formulário
-		//cadastroPage.enviarCadastro();
+		cadastroPage.enviarCadastro();
 		
 	}
 }

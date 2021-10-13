@@ -2,6 +2,8 @@ package br.fonseca.ivan.core;
 
 import static br.fonseca.ivan.core.DriverManager.getDriver;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -32,5 +34,9 @@ public class BasePage {
 	
 	public void limparCampoById(String id) {
 		getDriver().findElement(By.id(id)).clear();
+	}
+	
+	public void esperarPagina(int tempo) {
+		getDriver().manage().timeouts().implicitlyWait(tempo, TimeUnit.SECONDS);
 	}
 }
